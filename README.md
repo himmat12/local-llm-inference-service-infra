@@ -1,6 +1,6 @@
 # Local LLM Inference Service Infra
 
-A Docker-based local LLM inference service infrastructure that runs an Ollama serivce and serves the local models inferense service securel via tailscale.
+A Docker-based local LLM inference service infrastructure that runs an Ollama serivce and serves the local models inferense service securely via tailscale.
 
 > Note: The Agent used to serve as python client to consume the inference API is just a simple chatbot to demonestrate the client-server interaction.
 
