@@ -97,7 +97,7 @@ Key files:
 
 - Docker | Compose
 - Tailscale
-- Debian-based Python contaier Image
+- `debian:bookworm-slim` Python contaier Image
 - FastAPI / SQLAlchemy dependencies in the agent environment
 - `httpx` for Ollama API requests
 - `python-dotenv` for environment variable loading
