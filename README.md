@@ -33,7 +33,7 @@ The python client is designed to run inside Docker and connect to Ollama serice 
 
 ### Network
 
-- `local_code_network`
+- `local_network`
   - `driver: bridge`
 
 ### Storage
