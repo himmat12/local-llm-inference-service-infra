@@ -1,18 +1,19 @@
-# Local Coding Agent
+# Local LLM Inference Service Infra
 
-A Docker-based local coding agent project that runs an Ollama model container and a Python agent container.
-The agent connects to Ollama over an internal bridge network and provides an interactive terminal experience.
+A Docker-based local LLM inference service infrastructure that runs an Ollama serivce and serves the local models inferense service securel via tailscale.
 
-> Note: The Agent is just a ChatBot as of now (agentic capabilites are still in devellopment).
+> Note: The Agent used to serve as python client to consume the inference API is just a simple chatbot to demonestrate the client server interaction between self hosted Inference service and a chatbot.
 
 ## Project Overview
 
-This project builds a secure local coding assistant using:
+This project builds a secure local LLM inference service infrastructure using:
+- `Debian` headless server setup in a machine as `homelab` 
 - `ollama/ollama:latest` as the LLM serving backend
-- a custom Python-based `agent` container for interaction
+- a custom Python client `agent` container for interaction
 - Docker Compose for orchestration and isolation
+- `Tailscale` setup for exposing the service securely to the internet
 
-The agent is designed to run inside Docker and connect to Ollama over an isolated internal network.
+The python client is designed to run inside Docker and connect to Ollama serice over an isolated internal network.
 
 ## Architecture
 
@@ -94,9 +95,9 @@ Key files:
 
 ## Tools Used
 
-- Docker
-- Docker Compose
-- Debian-based Python container
+- Docker | Compose
+- Tailscale
+- Debian-based Python contaier Image
 - FastAPI / SQLAlchemy dependencies in the agent environment
 - `httpx` for Ollama API requests
 - `python-dotenv` for environment variable loading
@@ -127,8 +128,8 @@ This project supports two deployment modes controlled by `.env` and `docker-comp
 ### 1. Clone repository
 
 ```bash
-git clone https://github.com/himmat12/local-coding-agent.git local_coding_agent
-cd local_coding_agent
+git clone https://github.com/himmat12/local-llm-inference-service-infra.git
+cd local-llm-inference-service-infra
 ```
 
 ### 2. Create `.env`
@@ -156,7 +157,7 @@ This will start the Ollama and agent containers.
 docker compose ps
 ```
 
-You should see both `ollama` and `local-code-agent` running.
+You should see both `ollama` and `agent` running.
 
 ## Getting Started
 
