@@ -2,7 +2,7 @@
 
 A Docker-based local LLM inference service infrastructure that runs an Ollama serivce and serves the local models inferense service securel via tailscale.
 
-> Note: The Agent used to serve as python client to consume the inference API is just a simple chatbot to demonestrate the client server interaction between self hosted Inference service and a chatbot.
+> Note: The Agent used to serve as python client to consume the inference API is just a simple chatbot to demonestrate the client-server interaction.
 
 ## Project Overview
 
