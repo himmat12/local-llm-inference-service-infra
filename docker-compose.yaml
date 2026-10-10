@@ -30,7 +30,7 @@ services:
               device_ids: ["0"]  # Lock to GPU 0
               capabilities: [gpu]
     networks:
-      - local_code_network
+      - local_network
     
     entrypoint: ["/start_ollama.sh"]
 
@@ -61,7 +61,7 @@ services:
     stdin_open: true
     tty: true
     networks:
-      - local_code_network
+      - local_network
     labels:
       - com.centurylinklabs.watchtower.enable=true
       
@@ -77,5 +77,5 @@ volumes:
   ollama_data:
 
 networks:
-  local_code_network:
+  local_network:
     driver: bridge
