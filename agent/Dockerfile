@@ -2,7 +2,7 @@ FROM debian:bookworm-slim
 
 LABEL org.opencontainers.image.source="https://github.com/himmat12/local-llm-inference-service-infra"
 LABEL org.opencontainers.image.name="local-llm-inference-service-infra"
-LABEL org.opencontainers.image.description="A Docker-based local LLM inference service infrastructure that runs an Ollama serivce and serves the local models inferense service securel via tailscale."
+LABEL org.opencontainers.image.description="A Docker-based local LLM inference service infrastructure that runs an Ollama serivce and serves the local models inferense service securely via tailscale."
 LABEL org.opencontainers.image.licenses="MIT"
 
 ENV DEBIAN_FRONTEND=noninteractive \
